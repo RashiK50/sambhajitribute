@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fort">
+    <header>
+        <img src="logo.png">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </header>
+    
+    <script>
+      function toggleMenu() {
+          var menu = document.getElementById("myMenu");
+          menu.style.display = (menu.style.display === "block") ? "none" : "block";
+      }
+    </script>
+    
+    <!-- Hidden Menu -->
+    <div class="menu" id="myMenu">
+        <a href="index.html">Home</a>
+        <a href="bio.html">Biography</a>
+        <a href="forts.html">Forts</a>
+        <a href="literature.html">Literature Love</a>
+        <a href="battles.html">Battles</a>
+    </div>
+
+    <h2 style="text-align:center;">Forts Associated with Sambhaji Maharaj</h2>
+    <div id="map"></div>
+
+    <script>
+        function initMap() {
+            // Centered at Raigad Fort (adjust as needed)
+            var map = new google.maps.Map(document.getElementById("map"), {
+                center: { lat: 18.2359, lng: 73.537 },
+                zoom: 7
+            });
+
+            // Array of Forts with Coordinates
+            var forts = [
+                {
+                    name: "Raigad Fort",
+                    lat: 18.2359,
+                    lng: 73.537,
+                    description: "The capital of the Maratha Empire, where Sambhaji Maharaj was crowned as Chhatrapati after the passing of Shivaji Maharaj."
+                },
+                {
+                    name: "Sinhagad Fort",
+                    lat: 18.366,
+                    lng: 73.755,
+                    description: "A strategically important fort where Maratha forces defended against Mughal invasions."
+                },
+                {
+                    name: "Pratapgad Fort",
+                    lat: 17.9307,
+                    lng: 73.5802,
+                    description: "Famous for Shivaji Maharaj’s battle with Afzal Khan. Sambhaji Maharaj ensured its defense during his rule."
+                },
+                {
+                    name: "Panhala Fort",
+                    lat: 16.8125,
+                    lng: 74.1111,
+                    description: "A crucial fort where Sambhaji Maharaj took shelter while escaping from Aurangzeb’s forces."
+                },
+                {
+                    name: "Vishalgad Fort",
+                    lat: 16.8736,
+                    lng: 73.7539,
+                    description: "A key fort that played a role in Sambhaji Maharaj’s guerrilla warfare strategy against the Mughals."
+                },
+                {
+                    name: "Rajgad Fort",
+                    lat: 18.2461,
+                    lng: 73.6769,
+                    description: "One of the early capitals of the Maratha Empire, used by Shivaji Maharaj and later secured by Sambhaji."
+                },
+                {
+                    name: "Torna Fort",
+                    lat: 18.2783,
+                    lng: 73.6734,
+                    description: "The first fort captured by Shivaji Maharaj, maintained as a stronghold by Sambhaji."
+                },
+                {
+                    name: "Purandar Fort",
+                    lat: 18.276,
+                    lng: 73.977,
+                    description: "A historically significant fort that saw fierce battles between the Marathas and the Mughals."
+                },
+                {
+                    name: "Lohagad Fort",
+                    lat: 18.7103,
+                    lng: 73.4876,
+                    description: "A major fort used for guarding important trade routes during Sambhaji Maharaj’s reign."
+                },
+                {
+                    name: "Kondana (Sinhagad) Fort",
+                    lat: 18.366,
+                    lng: 73.755,
+                    description: "Another name for Sinhagad, known for its valorous Maratha warriors."
+                },
+                {
+                    name: "Malhargad Fort",
+                    lat: 18.3654,
+                    lng: 74.0337,
+                    description: "One of the later forts built by the Marathas to strengthen the southwestern region."
+                }
+            ];
+
+            // Loop through forts and add markers
+            forts.forEach(function(fort) {
+                var marker = new google.maps.Marker({
+                    position: { lat: fort.lat, lng: fort.lng },
+                    map: map,
+                    title: fort.name
+                });
+
+                var infoWindow = new google.maps.InfoWindow({
+                    content: `<h3>${fort.name}</h3><p>${fort.description}</p>`
+                });
+
+                marker.addListener("click", function() {
+                    infoWindow.open(map, marker);
+                });
+            });
+        }
+    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuybko0r0-g3RfQVkWewUehdLttMaSNDo&callback=initMap"></script>
+
+    <div class="foot">
+        <a href="legacy.html"><button><h3>Previous</h3></button></a>
+        <a href="index.html"><button ><h3>Home</h3></button></a>
+        </div>
+</body>
+</html>

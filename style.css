@@ -1,0 +1,590 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* cursor:pointer; */
+    color: black;
+}
+
+.home {
+    background-image: url("images/home1.jpg");
+    position:static;
+    top: 4rem;
+    /* position: relative; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: ;; */
+    overflow: hidden;
+}
+
+html,body{
+    scroll-behavior: smooth;
+    /* font-family: "Archivo Black", serif; */
+}
+
+header{
+    height: 4rem;
+    display: flex;
+    justify-content: right;
+ }
+
+header img{
+    height: 4rem;
+    display: flex;
+    padding: 0.6rem;
+    padding-right: 1.7rem;
+    object-fit:fill;
+    overflow: hidden;
+}
+
+.home h1{
+    position: absolute;
+    text-align: right;
+    padding-right: 2rem;
+    font-size: 5rem;
+    font-family: Papyrus, fantasy;
+    font-weight: 1000;
+    right: 0;
+    background-color: transparent;
+    top: 10rem;
+}
+
+.year {
+    text-align: right;
+    font-size:1.5rem ;
+    padding-right: 27rem;
+    padding-top: 0;
+    position: absolute;
+    right: 0;
+    top: 25rem;
+}
+
+.quote {
+    text-align: left;
+    font-size:1.5rem ;
+    padding-left: 62rem;
+    position: absolute;
+    right: 4rem;
+    top: 27rem;
+}
+
+@keyframes slide-in-right {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  .home h1 {
+    /* font-size: right; */
+    animation: slide-in-right 3s ease-in-out forwards;
+  }
+  
+  .hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 20px; /* Positioned at the top-left */
+    background: none;
+    border: none;
+    color: white;
+}
+
+/* Hidden Menu */
+.menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 50px;  /* Below the hamburger icon */
+    left: 20px;
+    background-color: #111;
+    width: 200px;
+    text-align: left;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+/* Menu Links */
+.menu a {
+    display: block;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #575757;
+}
+
+/* page1 bio*/
+
+.page1{
+    background-color: #111;
+}
+
+.timeline-container {
+    width: 100%;
+    height: 200px;
+    overflow-x: auto;
+    padding: 30px 0;
+    white-space: nowrap;
+    padding-left: 2rem;
+}
+
+.timeline {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: orange;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+}
+
+.timeline-item {
+    width: 360px;
+    height: 110px;
+    background: #ffedcc;
+    color: black;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 15px;
+    position: relative;
+    box-shadow: 2px 2px 10px rgba(255, 165, 0, 0.6);
+}
+
+.timeline-item h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Custom scrollbar for horizontal scrolling */
+.timeline-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.timeline-container::-webkit-scrollbar-track {
+    background: #444;
+}
+
+.timeline-container::-webkit-scrollbar-thumb {
+    background: orange;
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline-item {
+        width: 250px;
+        font-size: 14px;
+    }
+}
+
+.part1{
+    display: flex;
+    gap: 11rem;
+    position: relative;
+    top:6rem;
+    /* flex-direction: column; */
+}
+
+.bio{
+    display: flex;
+    flex-direction: column;
+}
+
+.bio img{
+    height: 50rem;
+    padding: 2rem;
+    border: orange solid 8px;
+    position: relative;
+    left:2rem;
+}
+
+@keyframes slide-in-left {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  .bio img{
+    /* font-size: right; */
+    animation: slide-in-left 3s ease-in-out forwards;
+  }
+
+.bio p{
+    color: aliceblue;
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+
+.gap{
+    width: 100%;
+    height: 2vh;
+}
+
+.par h1{
+    color: aliceblue;
+}
+
+.par h3{
+    color:aliceblue ;
+    padding: 1.5rem;
+    font-size: 1.7rem;
+}
+.par p{
+    color: aliceblue;
+    padding-right:1.5rem ;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    align-items: center;
+}
+
+.par{
+    padding: 2rem;
+ }
+
+/* page2 */
+
+.fort{
+    background-color: #111;
+}
+
+#map {
+    height: 100vh;
+    width: 100%;
+}
+/* page3 */
+
+.lit {
+    background-color: #111;
+    object-fit: cover;
+    position:relative;
+    background-position: 100%;
+
+}
+
+.balbhushan,.nayikabhed ,.sat, .box{
+    /* background-repeat: no-repeat; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+}
+
+.para{
+    font-size:30px;
+    font-weight: 900;
+    color:white;
+    /* background-color: #575757; */
+    /* z-index: 1;
+    text-align: left;
+    position: relative;
+    top:1rem;
+    right:33rem;
+    justify-content:start;
+    text-align: center; */
+}
+
+.gap{
+    width: 100%;
+    height: 10rem;
+}
+
+.para p{
+    position: absolute;
+}
+
+.images{
+    /* position: relative;
+    left: 16rem;
+    justify-content: center;
+    align-items: center ;
+    border-radius:2rem; */
+    
+} 
+
+.box{
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    gap: 3rem;
+
+    
+}
+
+
+/* page 4 */
+.main {
+    background-color: #111;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* Title */
+.title {
+    font-size: 2.5rem;
+    /* margin-bottom: 20px; */
+    color: white;
+    text-align: center;
+}
+
+/* Battle Container */
+.battle-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to move to a new row if space is full */
+    justify-content: center; /* Centers items in the row */
+    gap: 20px; /* Adds space between cards */
+    max-width: 80%; /* Limits width to prevent overflow */
+    margin: auto; /* Centers the entire container */
+    overflow-y: hidden;
+    overflow-x:hidden;
+}
+
+/* Battle Card Styles */
+.battle-card {
+    width: 250px;
+    height: 150px;
+    perspective: 1000px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    padding-bottom: 2rem;    
+}
+
+/* Hide checkbox */
+.battle-card input {
+    display: none;
+}
+
+/* Inner Flip Box */
+.battle-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;   
+}
+
+/* Front & Back Styling */
+.battle-front, .battle-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Front Side */
+.battle-front {
+    background: linear-gradient(to right, #ff9800, #ff5722);
+    color: black;
+    font-weight: bold;
+}
+
+/* Back Side */
+.battle-back {
+    background: linear-gradient(to right, #b184ff, #b8a8ff);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Flip Effect when Checkbox is Checked */
+.battle-card input:checked + .battle-inner {
+    transform: rotateY(180deg);
+}
+
+/* page 5 */
+
+.lgy{
+   background-color: #111;
+   padding: 2rem; 
+}
+
+.first{
+    background-color: #ff9800;
+    display: flex;
+    justify-content:center;
+    /* align-items: center; */
+    padding: 2rem;
+    border-radius: 2rem;
+    gap: 3rem;
+    position: relative;
+    text-align: center;
+}
+
+.i img{
+    width: 15rem;
+    border-radius: 1rem;
+}
+.first p{
+    font-size: 28px;
+}
+.first h2{
+    font-size: 30px;
+}
+
+.foot{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 2rem;
+    padding-top: 4rem;
+}
+
+.foot a{
+    cursor: pointer;
+}
+
+.foot h3{
+    font-size: 23px;
+    background-color:#ff9800;
+    border-radius: 1rem; 
+    padding: 0.5rem;   
+}
+
+.foot button{
+    border-radius: 1rem;
+}
+
+.landing{
+    min-height: 85vh;
+    justify-content:end;    
+    display: flex;
+    align-items: end;
+}
+
+
+@media (max-width: 768px){
+    .home {
+        background-image: url("images\lanp.webp");
+        
+
+    }
+
+    .home h1{
+        background-color:#ff9800;
+        border-radius: 1rem;
+        font-size: 28px;
+        position: absolutee;
+        right: 4rem;
+        top: 3rem;
+        transform: translate(-50%, -50%);
+    }
+
+    .year, .quote{
+        display: none;
+    }
+
+    .timeline-container{
+        width:100%;
+        height: 150px;
+        overflow-y: hidden;
+        }
+
+    .timeline::before{
+          width: 300%;  
+        }
+
+    .bio img{
+        height:25rem;
+        display: flex;
+        left: 6rem;
+        flex-direction: column;
+    }  
+
+    .part1{
+        display: block;
+    }
+
+    .par h1{
+        font-size:24px ;
+    }
+
+    .par h3{
+        font-size: 20px;
+    }
+
+    .par p{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .box{
+        display: flex;
+        justify-content:end ;
+        overflow-x: hidden;
+        object-fit: cover   ;
+    }
+
+    .balbhushan img{
+        position: relative;
+        left: 6rem;
+    }
+
+    .images{
+        height:20rem;
+        /* width: auto; */
+        position:absolute;
+        left:1rem;
+        object-fit: cover   ;
+    }
+
+    .gap{
+        width: 100%;
+        height: 50rem;
+    }
+
+    .first{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first p{
+        font-size: 15px;
+    }
+
+    .first h2{
+        font-size: 25px;
+        text-align: center;    
+    }
+
+    .first h1{
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .i img{
+        width: 10rem;
+    }
+
+    .foot{
+        padding: 0.5rem;
+    }
+
+    .foot h3{
+        font-size: 13px;
+    }
+}
+
+.images{
+    object-fit: cover;
+        /* width: 40rem; */
+        height: 40rem;
+        border-radius: 2rem;
+}

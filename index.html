@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sambhaji Maharaj</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+    
+    <header>
+        <img src="images\logo.png">
+     
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <div class="menu" id="myMenu">
+        <a href="index.html">Home</a>
+        <a href="bio.html">Biography</a>
+        <a href="literature.html">Literature Love</a>
+        <a href="battles.html">Battles</a>
+        <a href="legacy.html">Legacy</a>
+        <!-- <a href="forts.html">Forts</a> -->
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("myMenu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+    </script>
+    <section class="home">
+        
+        <h1><b>SAMBHAJI<BR>MAHARAJ</b></h1>
+        <p class="year">(1657-1689) <br></p>
+        <p class="quote">
+            <b>"सिंहासनावर शौर्य, रक्तात स्वाभिमान <br> छत्रपती संभाजी महाराज, मराठ्यांच्या अभिमान!"</b></p>
+
+    </section>
+    <!-- <a href="bio.html"><button class="next"><h3>Next</h3></button></a> -->
+    <!-- <div class="foot"> -->
+        <!-- <div></div>
+        <div><a href="bio.html"><button class="next"><h3>Next</h3></button></a></div>
+    </div> -->
+    
+    <div class="foot landing">
+       <a href="bio.html"><button ><h3>Next</h3></button></a>
+    </div>
+
+</body>
+</html>
